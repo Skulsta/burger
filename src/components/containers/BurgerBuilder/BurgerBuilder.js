@@ -2,6 +2,8 @@ import React, { Component, Fragment } from "react";
 import Burger from "../../Burger/Burger";
 import BuildControls from "../../Burger/BuildControls/BuildControls";
 import classes from "./BurgerBuilder.module.css";
+import Modal from "../../UI/Modal/Modal";
+import OrderSummary from "../../Burger/OrderSummary/OrderSummary";
 
 const INCREDIENT_PRICES = {
   salad: 5,
@@ -73,6 +75,9 @@ class BurgerBuilder extends Component {
 
     return (
       <Fragment>
+        <Modal>
+          <OrderSummary ingredients={this.state.ingredients} />
+        </Modal>
         <Burger ingredients={this.state.ingredients} />
         <BuildControls
           ingredientRemoved={this.removeIngredientHandler}
