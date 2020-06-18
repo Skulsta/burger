@@ -1,0 +1,11 @@
+.Button {
+}
+
+.Success {
+  background-color: red;
+  color: white;
+}
+
+.Danger {
+  background-color: darkgreen;
+}

@@ -85,7 +85,8 @@ class BurgerBuilder extends Component {
       <Fragment>
         <Modal
           backdropClicked={this.cancelPurchaseHandler}
-          show={this.state.purchasing}
+          show={true}
+          // FIX THIS AFTER! TODO
         >
           <OrderSummary ingredients={this.state.ingredients} />
         </Modal>
